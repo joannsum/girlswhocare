@@ -3,7 +3,6 @@ import { useAuth } from './hooks/useAuth';
 
 import NavBar from "@navigation/NavBar";
 import SideList from "@navigation/SideList";
-import TrendingVideos from "@components/TrendingVideos";
 import PopularPosts from "@components/PopularPosts";
 import "@styles/main.css";
 
@@ -38,7 +37,6 @@ function App() {
 
           <Main sx={{flexGrow: 1}}>
             {/*<Container maxWidth="xl">
-              <TrendingVideos />
           </Container>*/}
             <Container
               maxWidth="lg"

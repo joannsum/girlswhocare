@@ -18,7 +18,6 @@ const ctaStles = {
 
 import DropDownList from "@shared/DropDownList";
 import BaseItem from "@shared/BaseItem";
-import {sideListItems} from "@data/app.data";
 
 const SideList = () => {
   return (
@@ -26,17 +25,6 @@ const SideList = () => {
       sx={{height: "100%", width: "100%", py: 1}}
       justifyContent="space-between"
     >
-      <Box sx={{color: "text.secondary"}}>
-        {sideListItems.map((item, i) =>
-          item.type === "divider" ? (
-            <Divider key={i} sx={{my: 1}} />
-          ) : item.type === "nested" ? (
-            <DropDownList key={i} {...item} />
-          ) : (
-            <BaseItem key={i} wrapper={ListItemButton} {...item} />
-          ),
-        )}
-      </Box>
       <Box sx={ctaStles}>
         <Typography
           variant="body2"
@@ -49,10 +37,10 @@ const SideList = () => {
           taking part in conversations.
         </Typography>
         <Button color="secondary" variant="outlined">
-          Join Oranj
+          Join Girls Who Care
         </Button>
         <Link href="#" color="text.secondary" variant="overline" mt="1rem">
-          Oranj, © Inc 2024.
+          Girls Who Care, © Inc 2024.
         </Link>
       </Box>
     </Stack>

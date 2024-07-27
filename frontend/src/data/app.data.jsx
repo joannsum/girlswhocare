@@ -1,14 +1,10 @@
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import WifiIcon from "@mui/icons-material/Wifi";
-import BluetoothIcon from "@mui/icons-material/Bluetooth";
 import LoginIcon from "@mui/icons-material/Login";
 import HelpIcon from "@mui/icons-material/Help";
-import AssuredWorkloadIcon from "@mui/icons-material/AssuredWorkload";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import ReadMoreIcon from "@mui/icons-material/ReadMore";
 import GavelIcon from "@mui/icons-material/Gavel";
-import AdsClickIcon from "@mui/icons-material/AdsClick";
 import HomeIcon from "@mui/icons-material/Home";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
@@ -21,45 +17,30 @@ const settings = [
     altText: "Dark Mode",
     MainIcon: LightModeIcon,
     AltIcon: DarkModeIcon,
-  },
-  {
-    type: "switch",
-    text: "Wi-Fi",
-    MainIcon: WifiIcon,
-  },
-  {
-    type: "switch",
-    text: "Bluetooth",
-    MainIcon: BluetoothIcon,
-  },
+  }
 ];
 
 const termsPolicies = [
   {text: "Terms of Service"},
-  {text: "Cookie Policy"},
-  {text: "Refund Policy"},
-  {text: "Shipping Policy"},
-  {text: "Cancellation Policy"},
-  {text: "Return Policy"},
 ];
 
 const moreCategories = [
-  {text: "Oranje iOS"},
-  {text: "Oranje Android"},
+  {text: "Girls Who Care iOS"},
+  {text: "Girls Who Care Android"},
   {text: "Best Communities"},
   {text: "Blog"},
   {text: "FAQs"},
   {text: "About Us"},
-  {text: "Events"},
-  {text: "News"},
-  {text: "Testimonials"},
+  // {text: "Events"},
+  // {text: "News"},
+  // {text: "Testimonials"},
 ];
 
 export const userProfileItems = [
   {type: "section", text: "Settings", data: settings},
   {type: "divider"},
-  {text: "Help Center", MainIcon: HelpIcon},
-  {text: "Careers", MainIcon: AssuredWorkloadIcon},
+  // {text: "Help Center", MainIcon: HelpIcon},
+  // {text: "Careers", MainIcon: AssuredWorkloadIcon},
   {text: "Press", MainIcon: NewspaperIcon},
   {
     type: "nested",
@@ -73,7 +54,6 @@ export const userProfileItems = [
     MainIcon: GavelIcon,
     data: termsPolicies,
   },
-  {text: "Advertise with on Oranje", MainIcon: AdsClickIcon},
   {type: "divider"},
   {text: "Log In / Sign Up", MainIcon: LoginIcon},
 ];
@@ -97,202 +77,6 @@ import SchoolIcon from "@mui/icons-material/School";
 import ScienceIcon from "@mui/icons-material/Science";
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 
-const gamingSubMenu = [
-  {text: "Fortnite"},
-  {text: "League of Legends"},
-  {text: "Among Us"},
-];
-
-const sportsSubMenu = [
-  {text: "Football"},
-  {text: "Basketball"},
-  {text: "Tennis"},
-];
-
-const businessSubMenu = [
-  {text: "Entrepreneurship"},
-  {text: "Investing"},
-  {text: "Startups"},
-];
-
-const cryptoSubMenu = [
-  {text: "Bitcoin"},
-  {text: "Ethereum"},
-  {text: "Altcoins"},
-];
-
-const televisionSubMenu = [
-  {text: "Drama"},
-  {text: "Comedy"},
-  {text: "Documentaries"},
-];
-
-const celebritySubMenu = [
-  {text: "Hollywood"},
-  {text: "Music Stars"},
-  {text: "Influencers"},
-];
-
-const animalsPetsSubMenu = [
-  {text: "Cats"},
-  {text: "Dogs"},
-  {text: "Exotic Pets"},
-];
-
-const musicSubMenu = [{text: "Pop"}, {text: "Rock"}, {text: "Hip Hop"}];
-
-const moviesSubMenu = [{text: "Action"}, {text: "Drama"}, {text: "Comedy"}];
-
-const fitnessSubMenu = [
-  {text: "Cardio"},
-  {text: "Strength Training"},
-  {text: "Yoga"},
-];
-
-const natureSubMenu = [
-  {text: "Flowers"},
-  {text: "Landscapes"},
-  {text: "Wildlife"},
-];
-
-const foodSubMenu = [{text: "Italian"}, {text: "Mexican"}, {text: "Sushi"}];
-
-const travelSubMenu = [
-  {text: "Beaches"},
-  {text: "Mountains"},
-  {text: "Cities"},
-];
-
-const healthSubMenu = [
-  {text: "Nutrition"},
-  {text: "Mental Health"},
-  {text: "Fitness Tips"},
-];
-
-const educationSubMenu = [
-  {text: "Mathematics"},
-  {text: "History"},
-  {text: "Literature"},
-];
-
-const scienceSubMenu = [
-  {text: "Physics"},
-  {text: "Biology"},
-  {text: "Chemistry"},
-];
-
-const techSubMenu = [
-  {text: "Programming"},
-  {text: "Gadgets"},
-  {text: "Software Development"},
-];
-
-const topicsData = [
-  {
-    type: "nested",
-    text: "Gaming",
-    data: gamingSubMenu,
-    MainIcon: SportsEsportsIcon,
-  },
-  {
-    type: "nested",
-    text: "Sports",
-    data: sportsSubMenu,
-    MainIcon: SportsFootballIcon,
-  },
-  {
-    type: "nested",
-    text: "Business",
-    data: businessSubMenu,
-    MainIcon: BusinessIcon,
-  },
-  {
-    type: "nested",
-    text: "Crypto",
-    data: cryptoSubMenu,
-    MainIcon: MonetizationOnIcon,
-  },
-  {
-    type: "nested",
-    text: "Television",
-    data: televisionSubMenu,
-    MainIcon: TvIcon,
-  },
-  {
-    type: "nested",
-    text: "Celebrity",
-    data: celebritySubMenu,
-    MainIcon: PersonIcon,
-  },
-  {
-    type: "nested",
-    text: "Animals & Pets",
-    data: animalsPetsSubMenu,
-    MainIcon: PetsIcon,
-  },
-  {
-    type: "nested",
-    text: "Music",
-    data: musicSubMenu,
-    MainIcon: MusicNoteIcon,
-  },
-  {
-    type: "nested",
-    text: "Movies",
-    data: moviesSubMenu,
-    MainIcon: MovieIcon,
-  },
-  {
-    type: "nested",
-    text: "Fitness",
-    data: fitnessSubMenu,
-    MainIcon: FitnessCenterIcon,
-  },
-  {
-    type: "nested",
-    text: "Nature",
-    data: natureSubMenu,
-    MainIcon: EmojiNatureIcon,
-  },
-  {
-    type: "nested",
-    text: "Food",
-    data: foodSubMenu,
-    MainIcon: RestaurantIcon,
-  },
-  {
-    type: "nested",
-    text: "Travel",
-    data: travelSubMenu,
-    MainIcon: FlightIcon,
-  },
-  {
-    type: "nested",
-    text: "Health",
-    data: healthSubMenu,
-    MainIcon: LocalHospitalIcon,
-  },
-  {
-    type: "nested",
-    text: "Education",
-    data: educationSubMenu,
-    MainIcon: SchoolIcon,
-  },
-  {
-    type: "nested",
-    text: "Science",
-    data: scienceSubMenu,
-    MainIcon: ScienceIcon,
-  },
-  {
-    type: "nested",
-    text: "Tech",
-    data: techSubMenu,
-    MainIcon: EmojiObjectsIcon,
-  },
-];
-
-// Icons for Resources
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import WebIcon from "@mui/icons-material/Web";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
@@ -345,101 +129,8 @@ const popularPostsData = [
   {text: "Portuges"},
 ];
 
-export const sideListItems = [
-  {text: "Home", MainIcon: HomeIcon},
-  // {text: "Trends", MainIcon: TrendingUpIcon},
-  // {text: "Popular", MainIcon: WhatshotIcon},
-  {type: "divider"},
-  {
-    isNestedList: true,
-    type: "nested",
-    text: "Topics",
-    data: topicsData,
-    isOpen: true,
-  },
-  {type: "divider"},
-  {
-    isNestedList: true,
-    type: "nested",
-    text: "Resources",
-    data: resourcesData,
-  },
-  // {
-  //   isNestedList: true,
-  //   type: "nested",
-  //   text: "Popular posts",
-  //   data: popularPostsData,
-  // },
-];
 
-export const trendingVideos = [
-  {
-    title: "What People Are Saying on the Third Anniversary of Jan?",
-    url: "https://media2.giphy.com/media/vo8U7E8udj3cYDqLcg/giphy.webp",
-    avatar: {
-      userName: "HayaoFanPage",
-      url: "https://source.unsplash.com/random?gold?10",
-    },
-  },
-  {
-    title: "30 kids got free tickets for their first NFL game",
-    url: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExODl5NGl6MGpwOGx5ZWI2NXZheWtyN3IyeG1hMW52MHAzaXgyOGs2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/txC8ApcJe5GEM0h5wL/giphy.gif",
-    avatar: {
-      userName: "FrostyPenguin",
-      url: "https://source.unsplash.com/random?penguin?10",
-    },
-  },
-  {
-    title: "Study Links Airplane Toilets to Viral Transmission",
-    url: "https://media2.giphy.com/media/kcm1OXhUFxucxQntyI/giphy.gif",
-    avatar: {
-      userName: "SunnySparrow",
-      url: "https://source.unsplash.com/random?beach?3",
-    },
-  },
-  {
-    title: "FashionX Announces Neon Model Extravaganza!",
-    url: "https://media0.giphy.com/media/8Vrq2Aq20Io5sTdLrh/giphy.gif",
-    avatar: {
-      userName: "WiseOwl",
-      url: "https://source.unsplash.com/random?owl?52",
-    },
-  },
-  {
-    title:
-      "Accidentally Starts Kitchen Inferno, Jury Still Deciding: Genius or Gaffe?",
-    url: "https://media2.giphy.com/media/l2SpUHGccTQ4cogbm/giphy.gif?cid=ecf05e47jrh7fjuzqy2v2f5s82px0wx8o3dcamcw4hkjci0q&ep=v1_gifs_related&rid=giphy.gif&ct=g",
-    avatar: {
-      userName: "CuriousCat",
-      url: "https://source.unsplash.com/random?cat?82",
-    },
-  },
-  {
-    title: "I Invented the Viral Challenge That Almost Killed Me!",
-    url: "https://media1.giphy.com/media/8ua3WlT8PtJYgBSBsU/giphy.gif",
-    avatar: {
-      userName: "MightyLion",
-      url: "https://source.unsplash.com/random?lion?60",
-    },
-  },
-  {
-    title:
-      "Cat Rescues Toddler From Inferno, Internet Erupts in Fur-ocious Applause",
-    url: "https://media1.giphy.com/media/QTm9OcYZkynmCZMBXt/giphy.gif",
-    avatar: {
-      userName: "FriendlyDolphin",
-      url: "https://source.unsplash.com/random?ocean?3",
-    },
-  },
-  {
-    title: "The Most Intense Competition of the Year",
-    url: "https://media3.giphy.com/media/dIx1V97YYvVeDajwnn/giphy.webp",
-    avatar: {
-      userName: "NewsTV",
-      url: "https://source.unsplash.com/random?sports?10",
-    },
-  },
-];
+
 
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import PublicIcon from "@mui/icons-material/Public";
