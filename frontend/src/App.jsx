@@ -38,6 +38,12 @@ function App() {
           <Main sx={{flexGrow: 1}}>
             {/*<Container maxWidth="xl">
           </Container>*/}
+          
+            {/*testing CreatePost */}
+            {/*<Container maxWidth="xl">
+              <CreatePost />
+        </Container>*/}
+
             <Container
               maxWidth="lg"
               sx={{
