@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { grey, blue, deepOrange } from "@mui/material/colors";
+import { grey, blue, deepOrange, pink } from "@mui/material/colors";
 import { useState } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import ThemeContext from "@context/ThemeContext";
@@ -18,8 +18,8 @@ const AppThemeProvider = (props) => {
     palette: {
       mode,
       ...(mode === "dark" ? darkMode : lightMode),
-      primary: { main: "#1565c0" },
-      secondary: { main: deepOrange["A400"] },
+      primary: { main: "#5dded1" },
+      secondary: { main: pink[100] },
     },
     typography: { fontFamily: "'IBM Plex Sans', sans-serif" },
     components: {

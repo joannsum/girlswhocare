@@ -347,8 +347,8 @@ const popularPostsData = [
 
 export const sideListItems = [
   {text: "Home", MainIcon: HomeIcon},
-  {text: "Trends", MainIcon: TrendingUpIcon},
-  {text: "Popular", MainIcon: WhatshotIcon},
+  // {text: "Trends", MainIcon: TrendingUpIcon},
+  // {text: "Popular", MainIcon: WhatshotIcon},
   {type: "divider"},
   {
     isNestedList: true,
@@ -364,12 +364,12 @@ export const sideListItems = [
     text: "Resources",
     data: resourcesData,
   },
-  {
-    isNestedList: true,
-    type: "nested",
-    text: "Popular posts",
-    data: popularPostsData,
-  },
+  // {
+  //   isNestedList: true,
+  //   type: "nested",
+  //   text: "Popular posts",
+  //   data: popularPostsData,
+  // },
 ];
 
 export const trendingVideos = [
