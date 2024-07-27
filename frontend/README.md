@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="./show1.png">
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Oranj
 
-In the project directory, you can run:
+Whether you're building a forum, discussion platform, or any other community-driven app, **Oranj** provides a couple of useful components for rapid development.
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Dynamic Stories:** Keep users engaged with the unique Hot and Cold indicators. *Stories that are gaining popularity turn vibrant orange, while those receiving less attention adopt a cold blue hue.*
 
-### `npm test`
+- **Data-Driven Menus:** Menus that are shaped by data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Lazy Loading Posts:** Load content as users scroll, ensuring a smooth and efficient browsing experience.
 
-### `npm run build`
+<br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Customization
+### Menus
+Creating a simple menu in **Oranj** is straightforward. You can define it as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+const menu = [
+  {text: "Home"},
+  {text: "Our Services"},
+  {text: "Contact Us", MainIcon: ContactIcon} // Or we can add icons to any item we want
+]
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+However, the beauty lies in the flexibility of shaping menus based on the data you provide.
+For instance, adding switches, nested lists, dividers, buttons, and more can be seamlessly incorporated without any hassle:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```javascript
+const userProfileItems = [
+  {type: "section", text: "Settings", data: settings}, // section with switches
+  {type: "divider"}, // divider for asthetics
+  {text: "Help Center", MainIcon: HelpIcon}, // Normal menu item
+  {type: "nested", text: "More", MainIcon: ReadMoreIcon, data: moreCategories}, // nested menu within the current menu
+  ...
+  {text: "Log In / Sign Up", MainIcon: LoginIcon},
+];
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The result is a dynamic menu with various item types:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Menu with different item types](./assets/one.gif)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<br>
+<br>
 
-## Learn More
+Nested menus are a breeze to create within another menu or a nested DropDownList with as many levels as needed.
+Just add `isNested: true` to the root, and everything else is taken care of:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```javascript
+{isNested: true, data: your-data}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+Here's an example of a two-level nested drop-down menu:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![A 2 level nested drop down menu](./assets/two.gif)
 
-### Analyzing the Bundle Size
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can nest as deeply as required, with each **Oranj** component equipped with a safety fallback. If the content overflows,
+it gracefully shows a limited set of items and a "show more" option (customizable):
 
-### Making a Progressive Web App
+![show more, by default when many items can't fit](./assets/three.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
+<br>
 
-### Advanced Configuration
+### Infinite Scroll
+The default behavior of the `Post` component is to fetch 4 posts at a time, triggered by scrolling to the end of the page (customizable):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![triggering infinite scrolling](./assets/four.gif)
 
-### Deployment
+<br>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Stories
+By default, on mobile, you can swipe for the next or previous stories:
 
-### `npm run build` fails to minify
+![navigating stories](./assets/five.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+<br>
+
+Customization options include determining how many stories to show per breakpoint:
+
+```
+{xs: 1, sm: 2, md: 3, lg: 4}
+```
+
+![how many stories to show per screen size](./assets/six.gif)
+
+<br>
+<br>
+
+**Stories feature hot and cold indicators, dynamically determined based on your data to showcase the level of attention each story receives.**
+
+<br>
+<br>
+
+### Posts
+Posts are versatile, coming in four types:
+
+1. Posts with titles only (question posts)
+2. Posts with titles and inner text
+3. Posts with media (images and videos)
+4. Posts that are links
+
+The type of each post is automatically determined from your data without requiring any additional configuration.
+
+<br>
+<br>
+
+## Getting Started
+
+To get started with Oranj, follow these steps:
+
+```bash
+$ pnpm install
+$ pnpm dev
+```
+
+I'm on [Twitter](https://twitter.com/cipherlogs) feel free to follow or reach out if you have any questions or need further assistance!
+
+Happy community building!
+
+
+<br>
+<br>
+
+## License
+This project is licensed under the MIT License.
