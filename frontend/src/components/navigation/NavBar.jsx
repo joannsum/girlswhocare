@@ -109,16 +109,16 @@ const MainBtns = () => {
   );
 };
 
-const NavBar = () => {
+const NavBar = ({ user }) => {
   return (
     <AppBar elevation={0} position="sticky" sx={{bgcolor: "background.paper"}}>
-      <Toolbar sx={{px: {xs: 1, md: 4, postion:"relative"}}}>
+      <Toolbar sx={{px: {xs: 1, md: 4, position:"relative"}}}>
         <Box>
           <Logo />
         </Box>
         <Search />
-        <MainBtns />
-        <ProfileMenu />
+        <MainBtns user={user} />
+        <ProfileMenu user={user} />
       </Toolbar>
     </AppBar>
   );

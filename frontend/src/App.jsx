@@ -1,4 +1,5 @@
 import {Box, Container} from "@mui/material";
+import { useAuth } from './hooks/useAuth';
 
 import NavBar from "@navigation/NavBar";
 import SideList from "@navigation/SideList";
@@ -6,15 +7,24 @@ import TrendingVideos from "@components/TrendingVideos";
 import PopularPosts from "@components/PopularPosts";
 import "@styles/main.css";
 
+
 const AppWrapper = Box;
 const Main = Box;
 const SideListWrapper = Box;
 
 function App() {
+
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+
   return (
     <>
       <AppWrapper sx={{display: "flex", flexDirection: "column"}}>
-        <NavBar />
+        <NavBar user={user}/>
         <Box sx={{display: "flex", flexGrow: 1}}>
           <SideListWrapper
             sx={{
