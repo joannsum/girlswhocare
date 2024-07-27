@@ -89,7 +89,7 @@ const Search = () => {
     <Box align="center" flexGrow={1}>
       <Stack sx={styles} component="form" onSubmit={handleSubmit}>
         <SearchIcon fontSize="small" sx={{color: "text.secondary"}} />
-        <InputBase placeholder="Search Reddit" sx={{width: "100%"}} />
+        <InputBase placeholder="Search GirlsWhoCare" sx={{width: "100%"}} />
       </Stack>
     </Box>
   );

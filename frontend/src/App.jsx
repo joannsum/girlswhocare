@@ -27,9 +27,9 @@ function App() {
           </SideListWrapper>
 
           <Main sx={{flexGrow: 1}}>
-            <Container maxWidth="xl">
+            {/*<Container maxWidth="xl">
               <TrendingVideos />
-            </Container>
+          </Container>*/}
             <Container
               maxWidth="lg"
               sx={{
