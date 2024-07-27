@@ -9,17 +9,7 @@ import {
 
 import Carousel from "@shared/Carousel";
 import CommunityAvatar from "@shared/CommunityAvatar";
-import {trendingVideos} from "@data/app.data";
 
-const TrendingVideos = () => {
-  return (
-    <Carousel height="25rem">
-      {trendingVideos.map((item, i) => (
-        <CarouselCard key={i} {...item} />
-      ))}
-    </Carousel>
-  );
-};
 
 const CarouselCard = ({title, url, avatar}) => {
   const color = (theme) =>
@@ -69,4 +59,3 @@ const CarouselCard = ({title, url, avatar}) => {
   );
 };
 
-export default TrendingVideos;

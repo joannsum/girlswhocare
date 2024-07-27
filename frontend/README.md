@@ -3,9 +3,9 @@
 </p>
 
 
-# Oranj
+# Girls Who Care
 
-Whether you're building a forum, discussion platform, or any other community-driven app, **Oranj** provides a couple of useful components for rapid development.
+Whether you're building a forum, discussion platform, or any other community-driven app, **Girls Who Care** provides a couple of useful components for rapid development.
 
 <br>
 
@@ -21,7 +21,7 @@ Whether you're building a forum, discussion platform, or any other community-dri
 
 ## Customization
 ### Menus
-Creating a simple menu in **Oranj** is straightforward. You can define it as follows:
+Creating a simple menu in **Girls Who Care** is straightforward. You can define it as follows:
 
 ```javascript
 const menu = [
@@ -70,7 +70,7 @@ Here's an example of a two-level nested drop-down menu:
 <br>
 <br>
 
-You can nest as deeply as required, with each **Oranj** component equipped with a safety fallback. If the content overflows,
+You can nest as deeply as required, with each **Girls Who Care** component equipped with a safety fallback. If the content overflows,
 it gracefully shows a limited set of items and a "show more" option (customizable):
 
 ![show more, by default when many items can't fit](./assets/three.gif)
@@ -125,7 +125,7 @@ The type of each post is automatically determined from your data without requiri
 
 ## Getting Started
 
-To get started with Oranj, follow these steps:
+To get started with Girls Who Care, follow these steps:
 
 ```bash
 $ pnpm install
