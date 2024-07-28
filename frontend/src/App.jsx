@@ -1,5 +1,8 @@
 import { Box, Container, Button, Stack, Modal } from "@mui/material";
 import { useAuth } from './hooks/useAuth';
+
+import Login from './components/auth/Login';
+
 import React, { useState } from 'react';
 import NavBar from "@navigation/NavBar";
 import SideList from "@navigation/SideList";
@@ -14,7 +17,6 @@ const SideListWrapper = Box;
 
 function App() {
 
-  const { user, loading } = useAuth();
   const [isCreatingPost, setIsCreatingPost] = useState(false);
 
   const handleOpenCreatePost = () => {
@@ -25,11 +27,14 @@ function App() {
     setIsCreatingPost(false);
   };
 
-
   if (loading) {
     return <div>Loading...</div>;
   }
   
+
+  if (!user) {
+    return <Login />;
+  }
 
 
   return (
@@ -84,7 +89,6 @@ function App() {
             {/*<Container maxWidth="xl">
               <CreatePost />
         </Container>*/}
-
             <Container
               maxWidth="lg"
               sx={{

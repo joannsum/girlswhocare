@@ -2,22 +2,22 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
+import { supabase } from '../../supabaseClient';
 
 const Login = () => {
-  const handleLogin = () => {
-    // Instead of directly redirecting, we'll call an API endpoint
-    fetch('http://localhost:3001/auth/google', { 
-      method: 'GET',
-      credentials: 'include'
-    })
-    .then(response => response.json())
-    .then(data => {
-      // The backend should return a URL to redirect to
-      if (data.redirectUrl) {
-        window.location.href = data.redirectUrl;
-      }
-    })
-    .catch(error => console.error('Error:', error));
+  const handleLogin = async () => {
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+      });
+      
+      if (error) throw error;
+      
+      // If successful, data.url will contain the URL to redirect to
+      if (data) window.location.href = data.url;
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
   return (
