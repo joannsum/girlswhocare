@@ -1,6 +1,8 @@
 import {Box, Container} from "@mui/material";
 import { useAuth } from './hooks/useAuth';
 
+import Login from './components/auth/Login';
+
 import NavBar from "@navigation/NavBar";
 import SideList from "@navigation/SideList";
 import TrendingVideos from "@components/TrendingVideos";
@@ -14,10 +16,14 @@ const SideListWrapper = Box;
 
 function App() {
 
-  const { user, loading } = useAuth();
+  const {user, loading} = useAuth;
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+
+  if (!user) {
+    return <Login />;
   }
 
 
@@ -37,9 +43,6 @@ function App() {
           </SideListWrapper>
 
           <Main sx={{flexGrow: 1}}>
-            {/*<Container maxWidth="xl">
-              <TrendingVideos />
-          </Container>*/}
             <Container
               maxWidth="lg"
               sx={{

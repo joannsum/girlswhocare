@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
-import { supabase } from '../supabaseClient';
+import { supabase } from '../../supabaseClient';
 
 const Login = () => {
   const handleLogin = async () => {
