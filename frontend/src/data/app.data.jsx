@@ -25,8 +25,8 @@ const termsPolicies = [
 ];
 
 const moreCategories = [
-  {text: "Girls Who Care iOS"},
-  {text: "Girls Who Care Android"},
+  // {text: "Girls Who Care iOS"},
+  // {text: "Girls Who Care Android"},
   {text: "Best Communities"},
   {text: "Blog"},
   {text: "FAQs"},
