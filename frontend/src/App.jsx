@@ -17,6 +17,9 @@ const SideListWrapper = Box;
 
 function App() {
 
+  const {user, loading} = useAuth;
+
+
   const [isCreatingPost, setIsCreatingPost] = useState(false);
 
   const handleOpenCreatePost = () => {
