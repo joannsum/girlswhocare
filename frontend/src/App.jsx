@@ -5,7 +5,6 @@ import Login from './components/auth/Login';
 
 import NavBar from "@navigation/NavBar";
 import SideList from "@navigation/SideList";
-import TrendingVideos from "@components/TrendingVideos";
 import PopularPosts from "@components/PopularPosts";
 import "@styles/main.css";
 

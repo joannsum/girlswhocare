@@ -58,7 +58,7 @@ const Logo = () => {
         component="div"
         sx={{color: "secondary.main", fontWeight: 700}}
       >
-        Oranj
+        Girls Who Care
       </Typography>
     </Stack>
   );
