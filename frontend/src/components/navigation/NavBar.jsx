@@ -5,6 +5,9 @@ import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import ProfileMenu from "@navigation/ProfileMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import Login from '../auth/Login';
+
+
 import {
   AppBar,
   Toolbar,
@@ -104,7 +107,8 @@ const MainBtns = () => {
       <Button color="secondary" variant="outlined" sx={{...noWrap, ...visibleOnSm}}>
         <QrCodeScannerIcon /> Get App
       </Button>
-      <Button variant="outlined">Login</Button>
+      {/* <Button variant="outlined">Login</Button> */}
+      <Login />
     </Stack>
   );
 };
