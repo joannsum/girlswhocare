@@ -8,6 +8,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Login from '../auth/Login';
 
 
+
+
+
 import {
   AppBar,
   Toolbar,
@@ -22,6 +25,8 @@ import {
 
 import useToggle from "@hooks/useToggle";
 import SideList from "@navigation/SideList";
+
+import newLogo from '../auth/3.png'
 
 const Logo = () => {
   const {el, open, handleClick, handleClose} = useToggle();
@@ -52,9 +57,9 @@ const Logo = () => {
         <SideList />
       </Menu>
 
-      <Icon sx={mainLogoStyles}>
-        <GiOrangeSlice />
-      </Icon>
+      <Box sx={mainLogoStyles}>
+        <img src={newLogo} alt="GWS Logo" style={{ height: '40px' }} />
+      </Box>
 
       <Typography
         variant="h6"
